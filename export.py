@@ -12,14 +12,13 @@ def export_all_reports (file_name, year, title, genre):
         file.write("There is not such game")
     file.close()
 
-
-#followind doesn't work. Why??? :)
+#following doesn't work. Why??? :)
 #import sys
 #from printing import print_all_reports
 #def export_all_reports (file_name, year, title, genre):
     #sys.stdout = open('games_reports_output.txt','w')
     #print_all_reports (file_name, year, title, genre)
 
-
+    
 if __name__ == '__main__':
     export_all_reports ('game_stat.txt', 2000, "Counter-Strike", "First-person shooter")
