@@ -10,7 +10,6 @@ def export_all_reports (file_name, year, title, genre):
         file.write(str(get_line_number_by_title(file_name, title))+'\n')
     except:
         file.write("There is not such game")
-    
     file.close()
 
 
