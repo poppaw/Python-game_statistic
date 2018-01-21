@@ -1,6 +1,5 @@
 from reports import *
 
-
 def export_all_reports (file_name, year, title, genre):
     file = open('games_reports_output.txt','w')
     file.write(str(count_games (file_name))+'\n')
@@ -21,9 +20,6 @@ def export_all_reports (file_name, year, title, genre):
 #def export_all_reports (file_name, year, title, genre):
     #sys.stdout = open('games_reports_output.txt','w')
     #print_all_reports (file_name, year, title, genre)
-
-
-
 
 
 if __name__ == '__main__':
