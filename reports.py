@@ -1,6 +1,3 @@
-#wczytuje plik do listy
-file_name = 'game_stat.txt'
-
 #1 removes '\n' signs from end of each lines -> list of strings (each game as string)
 def read_file_lines_make_list (file_name):
     games_list = open (file_name).readlines()
