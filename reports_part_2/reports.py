@@ -89,8 +89,35 @@ def get_game(file_name, title):
             return i
 
 
+def collect_returns(file_name, title):
+    collected = []
+    collected.append(get_most_played(file_name))
+    collected.append (sum_sold (file_name))
+    collected.append (get_selling_avg(file_name))
+    #collected.append (count_longest_title(file_name))
+    collected.append (get_date_avg (file_name))
+    collected.append (get_game(file_name, title))
+    return collected
+
+
+    
+
+def main(file_name, title):
+    get_most_played(file_name)
+    sum_sold (file_name)
+    get_selling_avg(file_name)
+    #count_longest_title(file_name))
+    get_date_avg (file_name)
+    get_game(file_name, title)
+    collect_returns(file_name, title)
+
+
+
+
 if __name__ == '__main__':
-get_game('game_stat.txt', "Counter-Strike")
+    file_name ='game_stat.txt'
+    title = "Counter-Strike"
+    main(file_name, title)
 
 
 

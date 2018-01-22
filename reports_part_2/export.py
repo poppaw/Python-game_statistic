@@ -2,16 +2,11 @@ from reports import *
 
 
 def export_all_reports (file_name, year, title, genre):
-    file = open('games_reports_output.txt','w')
-    file.write(str(count_games (file_name))+'\n')
-    file.write(str(decide (file_name, year))+'\n')
-    file.write(str(get_latest(file_name))+'\n')
-    file.write(str(count_by_genre(file_name, genre))+'\n')
-    try:
-        file.write(str(get_line_number_by_title(file_name, title))+'\n')
-    except:
-        file.write("There is not such game")
-    
+    collected = collect_returns(file_name, title)
+    file = open('games_reports2_output.txt','w')
+    for i in collected:
+        file.write(str(i)+'\n')
+         
     file.close()
 
 
