@@ -76,5 +76,53 @@ def get_line_number_by_title(file_name, title):
     raise Exception ('ValueError: No index with such title')
 
 
+#8
+def list_titles(file_name):
+    games = values_to_list(file_name)
+    titles = []
+    for i in games:
+        titles.append(i[0])   
+    return titles
+    
+
+def sort_abc (file_name):
+    titles = list_titles(file_name)
+    i = 1
+    while i < len(titles):
+        j = 0
+        while j<= len(titles) - 2:
+            if titles[j] > titles[j+1]:
+                temp = titles[j+1]
+                titles [j+1] = titles[j]
+                titles[j] = temp
+            j+=1
+        i += 1     
+    return titles
 
 
+#9
+def list_genres (file_name):
+    games = values_to_list(file_name)
+    genres = []
+    for i in games:
+        if str(i[3]) not in genres:
+            genres.append(i[3])     
+    return genres
+
+
+def get_genres(file_name):
+    genres = list_genres(file_name)
+    i = 1
+    while i < len(genres):
+        j = 0
+        while j<= len(genres) - 2:
+            if genres[j] > genres[j+1]:
+                temp = genres[j+1]
+                genres [j+1] = genres[j]
+                genres[j] = temp
+            j+=1
+        i += 1
+    print (genres)
+    return genres
+    
+    
